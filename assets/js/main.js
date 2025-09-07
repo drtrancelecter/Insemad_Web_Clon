@@ -1,9 +1,10 @@
 
-// placeholder for simple interactivity
 document.addEventListener('DOMContentLoaded', () => {
-  // track clicks to WhatsApp CTA for future analytics hook
-  const w = document.querySelectorAll('[data-cta=whatsapp]');
-  w.forEach(btn => btn.addEventListener('click', ()=>{
-    console.log('WhatsApp CTA clicked');
-  }));
+  const video = document.querySelector('#hero-video');
+  const posterImg = document.querySelector('#hero-poster');
+  if(video){
+    video.addEventListener('error', ()=>{
+      if(posterImg){ posterImg.style.display='block'; }
+    });
+  }
 });
