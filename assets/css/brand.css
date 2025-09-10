@@ -1,136 +1,20 @@
-/* ===== INSEMAD — tema Palosa-like ===== */
-:root{
-  --teal-700: #0B6D81;
-  --teal-800: #0A5F71;
-  --teal-600: #0E7F95;
-  --bg-light: #EFEFEF;
-  --ink: #0F172A;
-  --muted: #6B7280;
-  --copper: #C27B48; /* tono Insemad */
-  --white: #fff;
+
+/* Estilos principales INSEMAD SPA */
+
+/* Botones flotantes decorativos */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter,system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color:var(--ink);
-  background:var(--bg-light);
-  line-height:1.45;
-}
-
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-
-/* Topbar */
-.topbar{
-  position:sticky;top:0;z-index:50;
-  background:#fff; border-bottom:1px solid #e7e7e7;
-}
-.topbar .wrap{display:flex;gap:24px;align-items:center;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
-.brand-mark{width:28px;height:28px;border-radius:50%;object-fit:cover}
-.main-nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
-.main-nav a{color:#333;text-decoration:none;padding:8px 10px;border-radius:8px}
-.main-nav a:hover{background:#f3f4f6}
-
-/* Views */
-.view{display:none}
-.view.active{display:block}
-
-/* Section header */
-.section-header{background:var(--teal-700);color:#fff;padding:28px 0}
-.section-header h2{margin:0 0 6px}
-.section-header .muted{opacity:.9}
-
-/* HERO teal */
-.hero{padding:36px 0 48px;}
-.hero--teal{
-  background:linear-gradient(180deg,var(--teal-700), var(--teal-800));
-  color:var(--white);
-}
-.hero__content{padding-top:8px;padding-bottom:6px}
-.hero__content h1{font-size:clamp(28px,3.2vw,40px);margin:0 0 8px}
-.hero__content .lede{max-width:72ch;margin:0 0 14px;color:#eaf6f8}
-.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-.chip{
-  display:inline-block;
-  padding:6px 10px;border-radius:999px;
-  background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.28);
-  font-size:13px;color:#fff;
-}
-.cta-row{margin:6px 0 4px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:10px 16px;border-radius:12px;
-  font-weight:600;border:0;text-decoration:none;cursor:pointer;
-}
-.btn-outline-copper{
-  color:var(--white);
-  border:2px solid var(--copper);
-  background:transparent;
-  box-shadow:0 1px 0 rgba(0,0,0,.1), inset 0 0 0 1px rgba(255,255,255,.25);
-}
-.btn-outline-copper:hover{background:var(--copper);color:#fff}
-
-.btn-copper{background:var(--copper);color:#fff}
-.btn-copper:hover{filter:brightness(.95)}
-
-/* Hero frame image */
-.hero__frame{margin:22px auto 8px;display:block}
-.hero__photo{
-  width:100%;height:auto;display:block;
-  border-radius:8px;
-  box-shadow:0 10px 22px rgba(0,0,0,.18);
-}
-
-/* Cards / grids */
-.grid{display:grid;gap:18px;margin:24px 0 40px}
-.cards-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:#fff;border-radius:14px;box-shadow:0 1px 0 rgba(0,0,0,.04);overflow:hidden;border:1px solid #eaeaea}
-.card-img{width:100%;height:160px;object-fit:cover;display:block}
-.card-body{padding:14px}
-.card-body h3{margin:0 0 6px}
-.muted{color:var(--muted)}
-
-/* Thumbs */
-.thumbs-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.thumb{width:100%;height:180px;object-fit:cover;border-radius:10px}
-
-/* Videos */
-.vthumb{width:100%;height:240px;background:#000;border-radius:10px}
-
-/* Contact form */
-.contact-form{background:#fff;border:1px solid #e9e9e9;border-radius:14px;padding:16px;box-shadow:0 1px 0 rgba(0,0,0,.04);}
-.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:10px}
-.contact-form input,.contact-form textarea{
-  width:100%;padding:10px 12px;border-radius:10px;border:1px solid #dcdcdc;font:inherit
-}
-.contact-form textarea{resize:vertical}
-
-/* Footer */
-.site-footer{border-top:1px solid #e7e7e7;background:#fafafa;color:#555}
-.footer-content{display:flex;align-items:center;gap:16px;justify-content:space-between;height:56px}
-
-/* Floating rail (exact palette) */
-.contact-rail{
-  position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:6px;z-index:60;
-}
-.rail-btn{
-  width:44px;height:44px;border:none;border-radius:12px;cursor:pointer;display:grid;place-items:center;
-  box-shadow:0 6px 14px rgba(0,0,0,.18);
-}
-.rail-expand{background:#000;color:#fff}
-.rail-call{background:#4C7A11} /* palosa green approx */
-.rail-in{background:#0B6DAD} /* palosa blue approx */
-.rail-call::before{content:"\260E";font-size:18px;color:#fff}
-.rail-in::before{content:"in";font-weight:800;font-family:Inter,system-ui;color:#fff}
-
-/* Small */
-@media (max-width:720px){
-  .main-nav{display:none}
-  .topbar .wrap{height:56px}
-  .hero{padding:28px 0 34px}
-  .hero__photo{border-radius:6px}
+.floating-buttons img {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
