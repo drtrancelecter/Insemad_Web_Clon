@@ -1,0 +1,66 @@
+/* Paleta y estilos inspirados en Palosa */
+:root{
+  --teal-700:#0b6f82;
+  --teal-800:#0a5f70;
+  --teal-900:#084f5e;
+  --teal-300:#3aa4b8;
+  --surface:#eef1f3;
+  --text:#1b1e1f;
+  --muted:#6b7280;
+  --copper:#b87333;
+  --white:#ffffff;
+  --shadow:0 6px 18px rgba(0,0,0,.15);
+}
+
+/* Reset mínimo */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--surface)}
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+.site-header{background:var(--white);position:sticky;top:0;z-index:50;box-shadow:var(--shadow)}
+.nav-inner{display:flex;align-items:center;gap:16px;justify-content:space-between;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.brand-logo{height:28px;width:auto;border-radius:999px}
+.site-nav a{margin:0 10px;color:var(--text);text-decoration:none;font-weight:600;opacity:.9}
+.site-nav a:hover{opacity:1}
+
+/* Hero */
+.section{position:relative}
+.hero{min-height:68vh;display:grid;place-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media video{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.25))}
+.hero-content{position:relative;color:var(--white);text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.hero-content h1{font-size:40px;margin:0 0 10px}
+.hero-content p{max-width:900px;margin:0 0 16px;line-height:1.5}
+.hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.hero-badges.center{justify-content:flex-start}
+.badge{background:rgba(255,255,255,.14);color:var(--white);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);backdrop-filter:saturate(160%) blur(4px);font-size:12px}
+
+/* CTA */
+.btn.cta{display:inline-block;padding:10px 16px;border-radius:10px;border:2px solid var(--copper);background:var(--white);color:var(--text);font-weight:700;text-decoration:none;box-shadow:var(--shadow)}
+.btn.cta:hover{background:var(--copper);color:var(--white);}
+
+/* Superficies estilo Palosa para otras secciones */
+.surface-teal{background:var(--teal-700);padding:56px 0}
+.card-surface{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:28px}
+.surface-teal h2{color:var(--white);margin:0 0 12px}
+.surface-teal p{color:var(--white);opacity:.95}
+
+/* Footer */
+.site-footer{background:var(--surface);padding:18px 0;box-shadow:0 -4px 14px rgba(0,0,0,.08)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.foot-logo{height:24px;width:auto;border-radius:999px}
+
+/* Dock lateral tipo Palosa */
+.dock{position:fixed;right:16px;bottom:20px;display:flex;flex-direction:column;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);z-index:60}
+.dock-item{display:grid;place-items:center;width:56px;height:56px;color:#fff;text-decoration:none;font-weight:800;font-family:system-ui}
+.dock-top{background:#000}
+.dock-call{background:#4d7c0f}
+.dock-in{background:#0b71b8;font-size:20px}
+
+/* Visibilidad por router */
+.section{display:none}
+.section.visible{display:block}
