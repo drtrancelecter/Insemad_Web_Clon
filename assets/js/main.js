@@ -1,35 +1,24 @@
+/* Hash-router + mejoras de accesibilidad y video */
 (function(){
-  const SECTIONS = Array.from(document.querySelectorAll('[data-section]'));
-  const NAV_LINKS = Array.from(document.querySelectorAll('[data-link]'));
-  function setActive(hash){
-    const id = (hash || '#inicio').replace('#','');
-    SECTIONS.forEach(sec=>{
-      const active = sec.id === id;
-      sec.classList.toggle('active', active);
-      sec.setAttribute('aria-hidden', active ? 'false':'true');
-      const vids = sec.querySelectorAll('video');
-      vids.forEach(v=> active ? (v.getAttribute('data-src') && !v.src && (v.src=v.getAttribute('data-src'))) : v.pause());
+  const views = Array.from(document.querySelectorAll('.view'));
+  const links = Array.from(document.querySelectorAll('.main-nav a'));
+
+  function show(id){
+    views.forEach(v => v.classList.toggle('active', '#'+v.id === id));
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+    // pausa videos fuera de foco
+    views.forEach(v => {
+      v.querySelectorAll('video').forEach(vid => {
+        if (!v.classList.contains('active')) { try{vid.pause();}catch(e){} }
+      });
     });
-    NAV_LINKS.forEach(a=>{
-      const target = a.getAttribute('href').replace('#','');
-      a.classList.toggle('active', target===id);
-      a.setAttribute('aria-current', target===id ? 'page':'false');
-    });
-    const heading = document.querySelector(`#${id} [id^="h-"]`);
-    if(heading){ heading.setAttribute('tabindex','-1'); heading.focus({preventScroll:true}); }
-    window.scrollTo({top:0, behavior:'smooth'});
+    window.scrollTo({top:0, behavior:'instant'});
   }
-  document.addEventListener('click', (e)=>{
-    const a = e.target.closest('a[data-link]');
-    if(!a) return;
-    const href = a.getAttribute('href') || '';
-    if(href.startsWith('#')){
-      e.preventDefault();
-      history.pushState(null, '', href);
-      setActive(href);
-    }
-  });
-  window.addEventListener('popstate', ()=> setActive(location.hash));
-  window.addEventListener('hashchange', ()=> setActive(location.hash));
-  setActive(location.hash || '#inicio');
+
+  function onHash(){
+    const id = location.hash || '#inicio';
+    show(id);
+  }
+  window.addEventListener('hashchange', onHash);
+  onHash();
 })();
