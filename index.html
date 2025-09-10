@@ -1,26 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INSEMAD SPA</title>
-  <link rel="stylesheet" href="assets/css/brand.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INSEMAD SPA — Pallets certificados</title>
+  <link rel="stylesheet" href="brand.css" />
 </head>
 <body>
-  <header>
-    <h1>Pallets certificados — NIMF-15</h1>
-    <p>Ingeniería y servicios madereros con 40 años en el rubro. Producción de 300.000 pallets/año. 20 años operando cámara NIMF-15 con sensores para exportación.</p>
+  <!-- Barra superior simple -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">INSEMAD SPA</span>
+      </div>
+      <nav class="nav">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#certificacion">Certificación</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#infraestructura">Infraestructura</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="floating-buttons">
-    <img src="assets/img/btn-arrow.png" alt="Ir">
-    <img src="assets/img/btn-phone.png" alt="Teléfono">
-    <img src="assets/img/btn-linkedin.png" alt="LinkedIn">
+  <!-- Hero estilo Palosa -->
+  <section class="hero-plate" id="inicio">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Pallets certificados — NIMF‑15</h1>
+        <p>
+          Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
+          Producción de <strong>300.000 pallets/año</strong>.
+          <strong>20 años</strong> operando cámara NIMF‑15 con sensores para exportación.
+        </p>
+        <div class="badges">
+          <span class="badge">NIMF‑15</span>
+          <span class="badge">Producción anual 300k</span>
+          <span class="badge">Hecho en Chile</span>
+        </div>
+        <a class="cta" href="https://wa.me/56940021032" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      </div>
+
+      <!-- Imagen central (súbela en assets/img/hero-palosa.jpg) -->
+      <figure class="hero-media">
+        <img src="assets/img/hero-palosa.jpg" alt="Planta de pallets INSEMAD" />
+      </figure>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="brand tiny">
+        <span class="brand-mark"></span>
+        <span class="brand-name">INSEMAD SPA</span>
+      </div>
+      <div class="copy">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- Botonera flotante decorativa (imágenes opcionales) -->
+  <div class="float-dock">
+    <a class="dock-btn dock-arrow" href="#" aria-label="Abrir"></a>
+    <a class="dock-btn dock-phone" href="#" aria-label="Teléfono"></a>
+    <a class="dock-btn dock-in" href="#" aria-label="LinkedIn"></a>
   </div>
 
-  <footer>
-    <p>© 2025 INSEMAD SPA. Todos los derechos reservados.</p>
-  </footer>
+  <script src="main.js"></script>
 </body>
 </html>
