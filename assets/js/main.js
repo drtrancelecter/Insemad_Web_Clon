@@ -1,24 +1,47 @@
-// Router por hash + utilidades
+// Hash router + UI interactions
 (function(){
-  const sections = Array.from(document.querySelectorAll('.section'));
-  const video = document.querySelector('#inicio video');
-  function show(id){
-    sections.forEach(s=>s.classList.toggle('visible', s.id === id));
-    if (id !== 'inicio' && video){ video.pause(); }
-    if (id === 'inicio' && video){ video.play().catch(()=>{}); }
-    // focus de accesibilidad
-    const el = document.getElementById(id);
-    if (el){ el.setAttribute('tabindex','-1'); el.focus({preventScroll:true}); window.scrollTo({top:0,behavior:'smooth'}); }
+  const routes = ["inicio","productos","certificacion","nosotros","galeria","infraestructura","contacto"];
+  const views = Object.fromEntries(routes.map(r => [r, document.getElementById(`view-${r}`)]));
+  const navLinks = Array.from(document.querySelectorAll('[data-route]'));
+  const railToggle = document.querySelector('.rail__toggle');
+  const rail = document.querySelector('.rail');
+
+  function show(route){
+    if(!routes.includes(route)) route = "inicio";
+    // toggle active link
+    navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === `#${route}`));
+    // show/hide views
+    Object.entries(views).forEach(([name, el])=>{
+      const on = name === route;
+      el.classList.toggle('is-visible', on);
+      if(on){ el.classList.add('view-enter'); setTimeout(()=>el.classList.remove('view-enter'), 350); }
+      // Pause any videos when hidden (defensive)
+      const vids = el.querySelectorAll('video');
+      vids.forEach(v=>{ if(!on && !v.paused){ v.pause(); } });
+    });
+    // scroll to top smoothly
+    window.scrollTo({top:0, behavior:'smooth'});
   }
-  function current(){
-    const h = (location.hash||'#inicio').replace('#','');
-    if (!document.getElementById(h)) return 'inicio';
-    return h || 'inicio';
+
+  function readHash(){
+    return (location.hash || '#inicio').replace('#','').toLowerCase();
   }
-  window.addEventListener('hashchange', ()=>show(current()));
-  document.addEventListener('click', (e)=>{
-    const brand = e.target.closest('.brand');
-    if (brand){ e.preventDefault(); location.hash='#inicio'; }
+
+  window.addEventListener('hashchange', () => show(readHash()));
+  document.addEventListener('DOMContentLoaded', () => show(readHash()));
+
+  // Rail expand/collapse (simple)
+  let open = true;
+  railToggle?.addEventListener('click', ()=>{
+    open = !open;
+    rail.querySelectorAll('a.rail__btn').forEach(btn=>{
+      btn.style.display = open ? 'grid' : 'none';
+    });
+    railToggle.textContent = open ? '→' : '←';
   });
-  show(current());
+
+  // Keyboard focus ring for accessibility
+  let usingKeyboard = false;
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Tab') document.body.classList.add('kbd'); });
+  window.addEventListener('mousedown', ()=>document.body.classList.remove('kbd'));
 })();
