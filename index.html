@@ -4,191 +4,174 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>INSEMAD SPA — Pallets certificados NIMF‑15</title>
-  <link rel="preload" href="assets/css/brand.css" as="style">
+  <link rel="preload" as="image" href="assets/img/hero.jpg">
   <link rel="stylesheet" href="assets/css/brand.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="container flex between center-v">
-      <div class="brand">
-        <img src="assets/img/logo.jpg" alt="INSEMAD SPA" class="brand__logo">
-        <span class="brand__name">INSEMAD SPA</span>
-      </div>
-      <nav class="nav">
-        <a href="#inicio" class="nav__link" data-nav>Inicio</a>
-        <a href="#productos" class="nav__link" data-nav>Productos</a>
-        <a href="#certificacion" class="nav__link" data-nav>Certificación</a>
-        <a href="#nosotros" class="nav__link" data-nav>Nosotros</a>
-        <a href="#galeria" class="nav__link" data-nav>Galería</a>
-        <a href="#infraestructura" class="nav__link" data-nav>Infraestructura</a>
-        <a href="#contacto" class="nav__link" data-nav>Contacto</a>
-      </nav>
-    </div>
+    <a href="#inicio" class="brand" aria-label="INSEMAD SPA">
+      <img src="assets/img/logo.jpg" alt="INSEMAD SPA">
+    </a>
+    <nav class="mainnav" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#certificacion">Certificación</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#galeria">Galería</a>
+      <a href="#infraestructura">Infraestructura</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <main id="app">
-    <!-- INICIO / HERO -->
-    <section id="inicio" class="view view--hero" data-view>
-      <div class="hero">
-        <video class="hero__video" autoplay muted playsinline loop poster="assets/img/hero.jpg">
-          <source src="assets/video/hero.mp4" type="video/mp4" />
-        </video>
-        <div class="hero__overlay"></div>
-        <div class="container hero__content">
-          <h1 class="h1">Pallets certificados — NIMF‑15</h1>
-          <p class="lead">
-            Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
-            Producción de <strong>300.000 pallets/año</strong>. <strong>20 años</strong> operando cámara NIMF‑15 con sensores para exportación.
-          </p>
-          <div class="badges">
-            <span class="badge">NIMF‑15</span>
-            <span class="badge">Producción anual 300k</span>
-            <span class="badge">Hecho en Chile</span>
-          </div>
-          <a class="cta cta--outline" href="https://wa.me/56940021032" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+  <!-- HERO / INICIO -->
+  <section id="inicio" class="view active" data-title="Inicio">
+    <div class="hero">
+      <video id="heroVideo" class="hero-media" autoplay muted playsinline loop poster="assets/img/hero.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay">
+        <h1>Pallets certificados — NIMF‑15</h1>
+        <p>Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro. Producción de <strong>300.000 pallets/año</strong>. <strong>20 años</strong> operando cámara NIMF‑15 con sensores para exportación.</p>
+        <div class="badges">
+          <span class="badge">NIMF‑15</span>
+          <span class="badge">Producción anual 300k</span>
+          <span class="badge">Hecho en Chile</span>
+        </div>
+        <a class="cta cta-outline" href="https://wa.me/56940021032" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="view" data-title="Productos">
+    <div class="container">
+      <h2>Productos</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/img/pallets.jpg" alt="Pallets a medida">
+          <h3>Pallets a medida</h3>
+          <p>Europallets y formatos personalizados según carga y logística. Materia prima certificada.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/bins.jpg" alt="Bins">
+          <h3>Bins</h3>
+          <p>Contenedores de madera robustos para agroindustria y exportación.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/cajones.jpg" alt="Cajones y envases">
+          <h3>Cajones &amp; envases</h3>
+          <p>Diseño y fabricación a pedido, optimizando costo/beneficio por producto.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/maderas.jpg" alt="Maderas para pallets y construcción">
+          <h3>Maderas para pallets y construcción</h3>
+          <p>Venta de maderas nuevas y certificadas, despacho nacional e internacional.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/parrillas.jpg" alt="Parrillas y tapas">
+          <h3>Parrillas y tapas</h3>
+          <p>Piezas complementarias para reparación o nuevos proyectos.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/especiales.jpg" alt="Pedidos especiales">
+          <h3>Pedidos especiales</h3>
+          <p>Soluciones a medida según requisitos técnicos y normativos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICACION -->
+  <section id="certificacion" class="view" data-title="Certificación">
+    <div class="container">
+      <h2>Certificación &amp; proceso</h2>
+      <div class="grid-3">
+        <div class="feature">
+          <h3>NIMF‑15</h3>
+          <p>20 años con cámara propia equipada con sensores, control de humedad y temperatura para cumplimiento FAO NIMF‑15.</p>
+        </div>
+        <div class="feature">
+          <h3>Tratamientos</h3>
+          <p>Baño antihongos a base de cobre y secado artificial. Materias primas de bosques regulados.</p>
+        </div>
+        <div class="feature">
+          <h3>Diseño técnico</h3>
+          <p>Visitas técnicas, modelado y adaptación de diseños para el proceso del cliente.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PRODUCTOS -->
-    <section id="productos" class="view view--alt" data-view hidden>
-      <div class="container">
-        <h2 class="h2 center">Productos</h2>
-        <p class="center sub">Fabricamos y suministramos pallets en todo tipo de medidas, además de piezas complementarias y embalajes especiales.</p>
-        <div class="grid cards">
-          <article class="card">
-            <img src="assets/img/pallets.jpg" alt="Pallets a medida">
-            <h3>Pallets a medida</h3>
-            <p>Europallets y formatos personalizados según carga y logística. Materia prima certificada.</p>
-          </article>
-          <article class="card">
-            <img src="assets/img/bins.jpg" alt="Bins">
-            <h3>Bins</h3>
-            <p>Contenedores de madera robustos para agroindustria y exportación.</p>
-          </article>
-          <article class="card">
-            <img src="assets/img/cajones.jpg" alt="Cajones & envases">
-            <h3>Cajones &amp; envases</h3>
-            <p>Diseño y fabricación a pedido, optimizando costo/beneficio por producto.</p>
-          </article>
-          <article class="card">
-            <img src="assets/img/maderas.jpg" alt="Maderas para pallets y construcción">
-            <h3>Maderas para pallets y construcción</h3>
-            <p>Venta de maderas nuevas y certificadas, despacho nacional e internacional.</p>
-          </article>
-          <article class="card">
-            <img src="assets/img/parrillas.jpg" alt="Parrillas y tapas">
-            <h3>Parrillas y tapas</h3>
-            <p>Piezas complementarias para reparación o nuevos proyectos.</p>
-          </article>
-          <article class="card">
-            <img src="assets/img/especiales.jpg" alt="Pedidos especiales">
-            <h3>Pedidos especiales</h3>
-            <p>Soluciones a medida según requerimientos técnicos y normativos.</p>
-          </article>
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="view" data-title="Nosotros">
+    <div class="container">
+      <h2>Nosotros</h2>
+      <p>INSEMAD Spa. fundada en 2007 por Víctor Araya Burgos, con 40+ años de experiencia en el rubro. Producimos aprox. 300.000 pallets/año en más de veinte modelos diferentes. Nuestra materia prima está certificada; aplicamos baños anti hongos y secado artificial. Adaptamos diseños a la necesidad del cliente y brindamos visitas técnicas para apoyar la decisión de compra.</p>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" class="view" data-title="Galería">
+    <div class="container">
+      <h2>Galería</h2>
+      <div class="masonry">
+        <img src="assets/img/pallets1.jpg" alt="Pallets 1">
+        <img src="assets/img/pallets2.jpg" alt="Pallets 2">
+        <img src="assets/img/pallets3.jpg" alt="Pallets 3">
+        <img src="assets/img/maderas1.jpg" alt="Maderas 1">
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRAESTRUCTURA -->
+  <section id="infraestructura" class="view" data-title="Infraestructura">
+    <div class="container">
+      <h2>Infraestructura</h2>
+      <div class="videos">
+        <video controls preload="none" data-src="assets/video/infra1.mp4"></video>
+        <video controls preload="none" data-src="assets/video/infra2.mp4"></video>
+        <video controls preload="none" data-src="assets/video/infra3.mp4"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="view" data-title="Contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <div class="contact-grid">
+        <div class="k">
+          <p><strong>Oficina Central:</strong> Av Romero Parcela 130 Lote 1A1, Colonia Kennedy, Paine — Santiago</p>
+          <p><strong>Email:</strong> paraya@insemad.cl · insemad@gmail.com</p>
+          <p><strong>Teléfono:</strong> +56 9 73548311 · +56 9 4002 1032</p>
         </div>
+        <form class="f" action="https://formspree.io/f/REEMPLAZA_AQUI" method="POST">
+          <label>Nombre <input type="text" name="nombre" required></label>
+          <label>Email <input type="email" name="email" required></label>
+          <label>Mensaje <textarea name="mensaje" rows="4" required></textarea></label>
+          <button type="submit" class="cta cta-solid">Enviar</button>
+        </form>
       </div>
-    </section>
-
-    <!-- CERTIFICACIÓN -->
-    <section id="certificacion" class="view" data-view hidden>
-      <div class="container">
-        <h2 class="h2 center">Certificación &amp; proceso</h2>
-        <div class="grid three">
-          <div class="info">
-            <h3>NIMF‑15</h3>
-            <p>20 años con cámara propia equipada con sensores, cumpliendo la norma fitosanitaria internacional para exportación.</p>
-          </div>
-          <div class="info">
-            <h3>Tratamientos</h3>
-            <p>Baño antihongos a base de cobre y secado controlado.</p>
-          </div>
-          <div class="info">
-            <h3>Diseño técnico</h3>
-            <p>Visitas técnicas, modelado y adaptación de productos según procesos productivos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NOSOTROS -->
-    <section id="nosotros" class="view view--alt" data-view hidden>
-      <div class="container narrow">
-        <h2 class="h2 center">Nosotros</h2>
-        <p>
-          INSEMAD Spa., fundada en 2007 por Víctor Araya Burgos, suma más de 40 años de experiencia en el rubro. Nos hemos consolidado como líderes en la producción y venta de maderas y pallets de diversos diseños, tanto para el mercado nacional como internacional.
-        </p>
-        <p>
-          Actualmente, producimos aproximadamente 300 mil pallets al año, con más de veinte modelos diferentes. Garantizamos materia prima certificada, sometida a tratamientos como baños anti hongos y secado artificial.
-        </p>
-        <p>
-          Dirección: Av. Romero Parcela 130 Lote 1A1, Colonia Kennedy, Paine, Santiago. Tel: +56 9 4002 1032
-        </p>
-      </div>
-    </section>
-
-    <!-- GALERÍA -->
-    <section id="galeria" class="view" data-view hidden>
-      <div class="container">
-        <h2 class="h2 center">Galería</h2>
-        <div class="grid gallery">
-          <img src="assets/img/pallets1.jpg" alt="Pallets 1">
-          <img src="assets/img/pallets2.jpg" alt="Pallets 2">
-          <img src="assets/img/pallets3.jpg" alt="Pallets 3">
-          <img src="assets/img/maderas1.jpg" alt="Maderas 1">
-        </div>
-      </div>
-    </section>
-
-    <!-- INFRAESTRUCTURA -->
-    <section id="infraestructura" class="view view--alt" data-view hidden>
-      <div class="container">
-        <h2 class="h2 center">Infraestructura</h2>
-        <div class="grid three">
-          <video controls muted playsinline preload="metadata" class="video">
-            <source src="assets/video/infra1.mp4" type="video/mp4">
-          </video>
-          <video controls muted playsinline preload="metadata" class="video">
-            <source src="assets/video/infra2.mp4" type="video/mp4">
-          </video>
-          <video controls muted playsinline preload="metadata" class="video">
-            <source src="assets/video/infra3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="view" data-view hidden>
-      <div class="container narrow">
-        <h2 class="h2 center">Contacto</h2>
-        <div class="contact">
-          <div>
-            <p><strong>Dirección:</strong> Av. Romero Parcela 130 Lote 1A1, Colonia Kennedy, Paine, Santiago</p>
-            <p><strong>Teléfono:</strong> <a href="tel:+56940021032">+56 9 4002 1032</a></p>
-            <p><strong>Email:</strong> <a href="mailto:contacto@insemad.cl">contacto@insemad.cl</a></p>
-            <p><a class="cta" href="https://wa.me/56940021032" target="_blank" rel="noopener">WhatsApp</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container flex between center-v">
-      <div class="brand brand--small">
-        <img src="assets/img/logo.jpg" alt="INSEMAD SPA" class="brand__logo">
-        <span class="brand__name">INSEMAD SPA</span>
+    <div class="container footer-inner">
+      <div class="brand-mini">
+        <img src="assets/img/logo.jpg" alt="INSEMAD SPA">
+        <span>INSEMAD SPA</span>
       </div>
       <small>© 2025 INSEMAD SPA. Todos los derechos reservados.</small>
     </div>
   </footer>
 
-  <!-- Floating Action Bar (Palosa-style) -->
-  <aside class="fab-rail" aria-label="Acciones rápidas">
-    <button class="fab fab--top" aria-label="Volver arriba" title="Arriba" id="btnTop">↥</button>
-    <a class="fab fab--phone" aria-label="Llamar" title="Llamar" href="tel:+56940021032">☎</a>
-    <a class="fab fab--in" aria-label="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/company/insemad" target="_blank" rel="noopener">in</a>
+  <!-- Barra flotante estilo Palosa -->
+  <aside class="floating">
+    <a class="blk blk-top" href="#inicio" aria-label="Subir">
+      <span>↥</span>
+    </a>
+    <a class="blk blk-call" href="tel:+56940021032" aria-label="Llamar"></a>
+    <a class="blk blk-in" href="https://www.linkedin.com/company/insemad" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
   </aside>
 
   <script src="assets/js/main.js"></script>
