@@ -1,0 +1,114 @@
+
+/* ============ INSEMAD SPA — visual overrides (safe) ============ */
+/* Drop this file as assets/css/brand.css or replace existing brand.css */
+/* Purpose: match guide typography, chips and WhatsApp button styling without breaking layout */
+
+:root{
+  --teal:#0E6770;
+  --teal-dark:#0B5057;
+  --copper:#C57A35;   /* subtle copper/orange for outlines */
+  --ink:#0F1720;
+  --paper:#ffffff;
+  --shadow: 0 10px 20px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.06);
+}
+
+/* ---------- Hero typography ---------- */
+.hero h1,
+.hero .hero-title,
+h1.hero-title{
+  font-size: clamp(32px, 3.6vw + 14px, 64px) !important;
+  line-height: 1.1 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+  margin: 0 0 14px 0;
+}
+
+.hero p,
+.hero .lead,
+p.lead{
+  font-size: clamp(16px, 0.9vw + 12px, 24px) !important;
+  line-height: 1.6 !important;
+  color: rgba(255,255,255,.95);
+  margin: 0 0 20px 0;
+}
+
+/* Emphasis words inside the lead */
+.hero .lead b,
+.hero .lead strong,
+.hero p b,
+.hero p strong{
+  font-weight: 800;
+  color: var(--paper);
+}
+
+/* ---------- Chips (NIMF-15 / Producción / Hecho en Chile) ---------- */
+.tag, .chip, .badge,
+.hero .tags .tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.65rem 1.1rem !important;
+  border-radius: 9999px !important;
+  background: var(--paper) !important;
+  color: var(--teal-dark) !important;
+  border: 2px solid rgba(0,0,0,.06) !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  font-weight: 700;
+  font-size: clamp(14px, .4vw + 12px, 18px) !important;
+}
+
+/* Space between chips */
+.tag + .tag,
+.chip + .chip,
+.badge + .badge{ margin-left:.6rem; }
+
+/* ---------- WhatsApp primary button ---------- */
+.btn, .button, .cta, .btn-whatsapp{
+  font-size: clamp(15px, .5vw + 13px, 20px) !important;
+  font-weight: 800 !important;
+  padding: .85rem 1.3rem !important;
+  border-radius: 14px !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  border: 3px solid var(--copper) !important;
+  box-shadow: 0 2px 0 rgba(0,0,0,.03), inset 0 0 0 2px rgba(255,255,255,.8);
+  transition: transform .08s ease, box-shadow .2s ease;
+}
+
+.btn-whatsapp:hover,
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* Ensure WhatsApp icon (if any) aligns nicely */
+.btn-whatsapp svg,
+.btn svg{ height:1.2em; width:1.2em; margin-right:.5rem; }
+
+/* ---------- Hero media card (main image) ---------- */
+.hero-card,
+.hero .media,
+.hero img.main,
+.hero .hero-img{
+  border-radius: 18px !important;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Remove possible hairline gap under images */
+img, svg, canvas, video{ display:block; }
+
+/* ---------- Footer fine text ---------- */
+footer, .footer, .copyright{
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+}
+
+/* ---------- Safety: keep layout intact on small screens ---------- */
+@media (max-width: 768px){
+  .tag, .chip, .badge{ padding:.55rem .9rem !important; }
+  .btn, .btn-whatsapp{ padding:.8rem 1.1rem !important; }
+}
+
+/* ================================================================ */
