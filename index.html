@@ -3,66 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>INSEMAD SPA — Pallets certificados NIMF‑15</title>
-  <link rel="preload" as="image" href="assets/img/hero.jpg">
-  <link rel="stylesheet" href="assets/css/brand.css" />
+  <title>INSEMAD SPA</title>
+  <link rel="stylesheet" href="assets/css/brand.css?v=1" />
 </head>
 <body>
   <header class="topbar">
     <div class="wrap">
-      <div class="brand">
-        <span class="brand-dot"></span>
-        <span class="brand-text">INSEMAD SPA</span>
-      </div>
+      <div class="brand"><span class="dot"></span> INSEMAD SPA</div>
       <nav class="nav">
-        <a class="active">Inicio</a>
-        <a>Productos</a>
-        <a>Certificación</a>
-        <a>Nosotros</a>
-        <a>Galería</a>
-        <a>Infraestructura</a>
-        <a>Contacto</a>
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#certificacion">Certificación</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#infraestructura">Infraestructura</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero-block">
-      <div class="wrap">
-        <h1>Pallets certificados — NIMF‑15</h1>
-        <p class="lead">
-          Ingeniería y servicios madereros con <b>40 años</b> en el rubro.
-          Producción de <b>300.000 pallets/año</b>. <b>20 años</b> operando cámara NIMF‑15 con sensores para exportación.
-        </p>
+  <main id="inicio" class="hero">
+    <div class="wrap hero-inner">
+      <h1>Pallets certificados — NIMF‑15</h1>
+      <p>Ingeniería y servicios madereros con <b>40 años</b> en el rubro. Producción de <b>300.000 pallets/año</b>. <b>20 años</b> operando cámara NIMF‑15 con sensores para exportación.</p>
 
-        <div class="badges">
-          <span class="badge">NIMF‑15</span>
-          <span class="badge">Producción anual 300k</span>
-          <span class="badge">Hecho en Chile</span>
-        </div>
-
-        <a class="cta" href="#" aria-label="Escríbenos por WhatsApp">Escríbenos por WhatsApp</a>
-
-        <figure class="hero-figure">
-          <img src="assets/img/hero.jpg" alt="Planta de pallets INSEMAD" class="hero-img" />
-        </figure>
+      <div class="badges">
+        <span class="tag">NIMF‑15</span>
+        <span class="tag">Producción anual 300k</span>
+        <span class="tag">Hecho en Chile</span>
       </div>
-    </section>
+
+      <a class="cta" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+
+      <figure class="hero-card">
+        <img src="assets/img/hero.jpg?v=1" alt="Planta de pallets INSEMAD" />
+      </figure>
+    </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="wrap">
-      <div class="foot-left"><span class="brand-dot"></span> INSEMAD SPA</div>
-      <div class="foot-right">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
+      <div class="brand-mini"><span class="dot"></span> INSEMAD SPA</div>
+      <div class="copy">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
     </div>
   </footer>
 
-  <!-- Decorative vertical buttons (bottom-right). They are non-interactive for now. -->
-  <div class="rail">
-    <button class="rail-btn rail-arrow" aria-hidden="true" tabindex="-1" title="Decorativo"></button>
-    <button class="rail-btn rail-phone" aria-hidden="true" tabindex="-1" title="Decorativo"></button>
-    <button class="rail-btn rail-in" aria-hidden="true" tabindex="-1" title="Decorativo"></button>
-  </div>
+  <!-- Botones decorativos, mismo tamaño, sin acción -->
+  <aside class="dock" aria-hidden="true">
+    <img class="dock-btn" src="assets/img/btn_arrow.png" alt="decorativo" />
+    <img class="dock-btn" src="assets/img/btn_phone.png" alt="decorativo" />
+    <img class="dock-btn" src="assets/img/btn_linkedin.png" alt="decorativo" />
+  </aside>
 
   <script src="assets/js/main.js"></script>
 </body>
