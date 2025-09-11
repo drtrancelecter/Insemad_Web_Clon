@@ -1,54 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>INSEMAD SPA</title>
-  <link rel="stylesheet" href="assets/css/brand.css" />
+  <link rel="preload" href="assets/img/hero.jpg" as="image">
+  <link rel="stylesheet" href="assets/css/brand.css"/>
 </head>
 <body>
   <header class="topbar">
-    <div class="wrap">
-      <div class="brand"><span class="brand-mark"></span> INSEMAD SPA</div>
-      <nav class="mainnav">
-        <a href="#inicio" data-route>Inicio</a>
-        <a href="#productos" data-route>Productos</a>
-        <a href="#certificacion" data-route>Certificación</a>
-        <a href="#nosotros" data-route>Nosotros</a>
-        <a href="#galeria" data-route>Galería</a>
-        <a href="#infraestructura" data-route>Infraestructura</a>
-        <a href="#contacto" data-route>Contacto</a>
-      </nav>
-    </div>
+    <div class="brand"><img src="assets/img/logo.jpg" alt="INSEMAD SPA" class="brand__logo"> INSEMAD SPA</div>
+    <nav class="nav">
+      <a href="#inicio" data-route>Inicio</a>
+      <a href="#productos" data-route>Productos</a>
+      <a href="#certificacion" data-route>Certificación</a>
+      <a href="#nosotros" data-route>Nosotros</a>
+      <a href="#galeria" data-route>Galería</a>
+      <a href="#infraestructura" data-route>Infraestructura</a>
+      <a href="#contacto" data-route>Contacto</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="inicio" class="view active">
+  <main id="app">
+    <!-- INICIO -->
+    <section id="inicio" class="view is-active">
       <div class="wrap">
-        <h1>Pallets certificados — NIMF-15</h1>
-        <p>Ingeniería y servicios madereros con <b>40 años</b> en el rubro.
-           Producción de <b>300.000 pallets/año</b>. <b>20 años</b> operando cámara NIMF-15.</p>
-        <a class="cta" href="https://wa.me/56900000000" target="_blank">Escríbenos por WhatsApp</a>
-        <figure class="hero-card">
-          <img src="assets/img/hero.jpg" alt="Planta INSEMAD" />
+        <h1>Pallets certificados — NIMF‑15</h1>
+        <p class="lead">
+          Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
+          Producción de <strong>300.000 pallets/año</strong>. <strong>20 años</strong> operando cámara NIMF‑15 con sensores para exportación.
+        </p>
+        <div class="badges">
+          <span class="chip">NIMF‑15</span>
+          <span class="chip">Producción anual 300k</span>
+          <span class="chip">Hecho en Chile</span>
+        </div>
+        <a class="cta" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+
+        <figure class="hero">
+          <img src="assets/img/hero.jpg" alt="Planta de pallets INSEMAD" width="1200" height="280" loading="eager">
         </figure>
       </div>
     </section>
 
-    <section id="productos" class="view"><div class="wrap"><h2>Productos</h2><p>Listado de productos aquí.</p></div></section>
-    <section id="certificacion" class="view"><div class="wrap"><h2>Certificación</h2><p>Detalle de NIMF-15 aquí.</p></div></section>
-    <section id="nosotros" class="view"><div class="wrap"><h2>Nosotros</h2><p>Historia de INSEMAD.</p></div></section>
-    <section id="galeria" class="view"><div class="wrap"><h2>Galería</h2><p>Fotos próximamente.</p></div></section>
-    <section id="infraestructura" class="view"><div class="wrap"><h2>Infraestructura</h2><p>Detalles de la planta.</p></div></section>
-    <section id="contacto" class="view"><div class="wrap"><h2>Contacto</h2><p>Email: contacto@insemad.cl</p></div></section>
+    <!-- PLANTILLAS VACÍAS (listas para personalizar) -->
+    <section id="productos" class="view">
+      <div class="wrap">
+        <h2>Productos</h2>
+        <p>Catálogo resumido: pallets, bins, cajones, maderas y piezas complementarias.</p>
+      </div>
+    </section>
+
+    <section id="certificacion" class="view">
+      <div class="wrap">
+        <h2>Certificación</h2>
+        <p>NIMF‑15 — procesos, sensores y trazabilidad.</p>
+      </div>
+    </section>
+
+    <section id="nosotros" class="view">
+      <div class="wrap">
+        <h2>Nosotros</h2>
+        <p>Ingeniería y servicios madereros con 40 años de experiencia.</p>
+      </div>
+    </section>
+
+    <section id="galeria" class="view">
+      <div class="wrap">
+        <h2>Galería</h2>
+        <p>Imágenes de planta, procesos y despacho.</p>
+      </div>
+    </section>
+
+    <section id="infraestructura" class="view">
+      <div class="wrap">
+        <h2>Infraestructura</h2>
+        <p>Cámara NIMF‑15, líneas de clavos, hornos y logística.</p>
+      </div>
+    </section>
+
+    <section id="contacto" class="view">
+      <div class="wrap">
+        <h2>Contacto</h2>
+        <p>Escríbenos: contacto@insemad.cl • +56 9 0000 0000</p>
+      </div>
+    </section>
   </main>
 
-  <footer class="foot"><div class="wrap">© 2025 INSEMAD SPA</div></footer>
+  <footer class="footer">
+    <div class="wrap">
+      <span class="brand-dot"></span> INSEMAD SPA
+      <span class="sep">© 2025 INSEMAD SPA. Todos los derechos reservados.</span>
+    </div>
+  </footer>
 
-  <aside class="rail" aria-hidden="true">
-    <img class="rail-btn" src="assets/img/btn_arrow.png" alt="" />
-    <img class="rail-btn" src="assets/img/btn_phone.png" alt="" />
-    <img class="rail-btn" src="assets/img/btn_linkedin.png" alt="" />
+  <!-- Botonera decorativa (sin acción por ahora) -->
+  <aside class="rail">
+    <button class="rail__btn rail__btn--arrow" aria-label="Abrir"></button>
+    <button class="rail__btn rail__btn--phone" aria-label="Teléfono"></button>
+    <button class="rail__btn rail__btn--in" aria-label="LinkedIn"></button>
   </aside>
 
   <script src="assets/js/main.js"></script>
