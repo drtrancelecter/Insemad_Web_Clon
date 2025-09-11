@@ -1,14 +1,28 @@
-
-(function () {
-  const routes = Array.from(document.querySelectorAll('.route'));
-  const navLinks = Array.from(document.querySelectorAll('.nav-link'));
-  function show(hash){
-    const id = (hash || location.hash || '#inicio').replace('#','');
-    routes.forEach(r => r.classList.toggle('is-visible', r.id === id));
-    navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#'+id));
-    // Scroll a top suave
-    window.scrollTo({top:0, behavior:'instant'});
-  }
-  window.addEventListener('hashchange', () => show(location.hash));
-  show(location.hash);
-})();
+// Marca el link activo según el hash
+function setActiveFromHash(){
+  const hash = window.location.hash || "#inicio";
+  document.querySelectorAll('.nav a').forEach(a=>{
+    if(a.getAttribute('href') === hash){ a.setAttribute('aria-current','page'); }
+    else { a.removeAttribute('aria-current'); }
+  });
+}
+window.addEventListener('hashchange', setActiveFromHash);
+window.addEventListener('DOMContentLoaded', ()=>{
+  // Si no hay hash, forzamos #inicio para mantener navegación tipo SPA
+  if(!window.location.hash){ window.location.hash = "#inicio"; }
+  setActiveFromHash();
+  // scroll suave
+  document.querySelectorAll('.nav a').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      // Comportamiento nativo + suavizado
+      const id = a.getAttribute('href');
+      const el = document.querySelector(id);
+      if(el){
+        e.preventDefault();
+        history.pushState(null, "", id);
+        setActiveFromHash();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+});
