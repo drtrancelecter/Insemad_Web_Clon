@@ -4,55 +4,51 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>INSEMAD SPA</title>
-  <link rel="stylesheet" href="assets/css/brand.css?v=1" />
+  <link rel="stylesheet" href="assets/css/brand.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="wrap">
-      <div class="brand"><span class="dot"></span> INSEMAD SPA</div>
-      <nav class="nav">
-        <a class="active" href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#certificacion">Certificación</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#galeria">Galería</a>
-        <a href="#infraestructura">Infraestructura</a>
-        <a href="#contacto">Contacto</a>
+      <div class="brand"><span class="brand-mark"></span> INSEMAD SPA</div>
+      <nav class="mainnav">
+        <a href="#inicio" data-route>Inicio</a>
+        <a href="#productos" data-route>Productos</a>
+        <a href="#certificacion" data-route>Certificación</a>
+        <a href="#nosotros" data-route>Nosotros</a>
+        <a href="#galeria" data-route>Galería</a>
+        <a href="#infraestructura" data-route>Infraestructura</a>
+        <a href="#contacto" data-route>Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main id="inicio" class="hero">
-    <div class="wrap hero-inner">
-      <h1>Pallets certificados — NIMF‑15</h1>
-      <p>Ingeniería y servicios madereros con <b>40 años</b> en el rubro. Producción de <b>300.000 pallets/año</b>. <b>20 años</b> operando cámara NIMF‑15 con sensores para exportación.</p>
-
-      <div class="badges">
-        <span class="tag">NIMF‑15</span>
-        <span class="tag">Producción anual 300k</span>
-        <span class="tag">Hecho en Chile</span>
+  <main>
+    <section id="inicio" class="view active">
+      <div class="wrap">
+        <h1>Pallets certificados — NIMF-15</h1>
+        <p>Ingeniería y servicios madereros con <b>40 años</b> en el rubro.
+           Producción de <b>300.000 pallets/año</b>. <b>20 años</b> operando cámara NIMF-15.</p>
+        <a class="cta" href="https://wa.me/56900000000" target="_blank">Escríbenos por WhatsApp</a>
+        <figure class="hero-card">
+          <img src="assets/img/hero.jpg" alt="Planta INSEMAD" />
+        </figure>
       </div>
+    </section>
 
-      <a class="cta" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
-
-      <figure class="hero-card">
-        <img src="assets/img/hero.jpg?v=1" alt="Planta de pallets INSEMAD" />
-      </figure>
-    </div>
+    <section id="productos" class="view"><div class="wrap"><h2>Productos</h2><p>Listado de productos aquí.</p></div></section>
+    <section id="certificacion" class="view"><div class="wrap"><h2>Certificación</h2><p>Detalle de NIMF-15 aquí.</p></div></section>
+    <section id="nosotros" class="view"><div class="wrap"><h2>Nosotros</h2><p>Historia de INSEMAD.</p></div></section>
+    <section id="galeria" class="view"><div class="wrap"><h2>Galería</h2><p>Fotos próximamente.</p></div></section>
+    <section id="infraestructura" class="view"><div class="wrap"><h2>Infraestructura</h2><p>Detalles de la planta.</p></div></section>
+    <section id="contacto" class="view"><div class="wrap"><h2>Contacto</h2><p>Email: contacto@insemad.cl</p></div></section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="brand-mini"><span class="dot"></span> INSEMAD SPA</div>
-      <div class="copy">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
-    </div>
-  </footer>
+  <footer class="foot"><div class="wrap">© 2025 INSEMAD SPA</div></footer>
 
-  <!-- Botones decorativos, mismo tamaño, sin acción -->
-  <aside class="dock" aria-hidden="true">
-    <img class="dock-btn" src="assets/img/btn_arrow.png" alt="decorativo" />
-    <img class="dock-btn" src="assets/img/btn_phone.png" alt="decorativo" />
-    <img class="dock-btn" src="assets/img/btn_linkedin.png" alt="decorativo" />
+  <aside class="rail" aria-hidden="true">
+    <img class="rail-btn" src="assets/img/btn_arrow.png" alt="" />
+    <img class="rail-btn" src="assets/img/btn_phone.png" alt="" />
+    <img class="rail-btn" src="assets/img/btn_linkedin.png" alt="" />
   </aside>
 
   <script src="assets/js/main.js"></script>

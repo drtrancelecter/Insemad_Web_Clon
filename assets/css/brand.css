@@ -1,41 +1,15 @@
 :root{
-  --teal:#0c6b7d;
-  --teal-d:#0a5968;
-  --paper:#f5f5f7;
-  --ink:#0f172a;
-  --copper:#c67b42;
+  --teal:#0b6d7a;--copper:#d49a6a;--shadow:0 10px 20px rgba(0,0,0,.15);
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:#fff}
-
-/* Topbar */
-.topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:10}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{font-weight:700;color:#0f172a}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid var(--copper);margin-right:8px}
-.nav a{color:#334;text-decoration:none;margin-left:18px;padding:6px 10px;border-radius:8px}
-.nav a.active,.nav a:hover{background:#f3f4f6}
-
-/* Hero */
-.hero{background:linear-gradient(180deg,var(--teal),var(--teal-d));padding:44px 0 28px;color:#fff}
-.hero-inner{max-width:820px}
-.hero h1{margin:0 0 8px;font-size:34px;font-weight:800}
-.hero p{margin:0 0 12px;color:#eaf6f8}
-.badges{display:flex;gap:10px;margin:10px 0 14px;flex-wrap:wrap}
-.tag{background:#eef3f4;color:#223;padding:6px 10px;border-radius:999px;font-size:12px}
-.cta{display:inline-block;background:#fff;color:#0f172a;border:2px solid var(--copper);padding:8px 14px;border-radius:12px;font-weight:700;text-decoration:none}
-.cta:hover{background:var(--copper);color:#fff}
-
-.hero-card{margin:18px 0 0;background:#000;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.2);overflow:hidden}
-.hero-card img{display:block;width:100%;height:auto}
-
-/* Footer */
-.footer{background:#fff;border-top:1px solid #eee}
-.footer .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;color:#555}
-
-/* Dock decorativa */
-.dock{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9}
-.dock-btn{width:62px;height:62px;border-radius:16px;box-shadow:0 12px 24px rgba(0,0,0,.25);display:block}
-@media (max-width:720px){.dock-btn{width:56px;height:56px} .hero h1{font-size:28px}}
+body{margin:0;font-family:sans-serif;background:#0b6d7a;color:#fff}
+.wrap{max-width:1100px;margin:auto;padding:20px}
+.topbar{background:#fff;color:#000;padding:10px;box-shadow:var(--shadow)}
+.mainnav a{margin:0 10px;text-decoration:none;color:#000}
+.mainnav a.active{font-weight:bold}
+.view{display:none}
+.view.active{display:block}
+.cta{display:inline-block;padding:10px 14px;margin:10px 0;border:2px solid var(--copper);border-radius:8px;background:#fff;color:#000;text-decoration:none}
+.hero-card img{max-width:100%;border-radius:10px;box-shadow:var(--shadow)}
+.foot{background:#fff;color:#000;text-align:center;padding:10px;margin-top:20px}
+.rail{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:10px}
+.rail-btn{width:50px;height:50px;border-radius:10px;box-shadow:var(--shadow)}
