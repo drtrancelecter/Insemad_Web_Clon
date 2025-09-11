@@ -1,0 +1,45 @@
+
+/* === INSEMAD - Color guía profundo para hero ===
+   Forzamos el color exacto de la guía (#0A5A5F), saltando cachés y especificidad. */
+
+:root{
+  --teal-hero: #0A5A5F;
+  /* Si tu hoja usa variables, estas líneas las igualan al tono guía */
+  --teal: #0A5A5F;
+  --teal-700: #0A5A5F;
+  --teal-800: #09494E;
+}
+
+/* Fallback directo por si no se usan variables */
+body,
+.hero,
+.hero::before,
+.section-hero,
+.section-hero::before,
+header + .hero,
+header + .section-hero{
+  background: #0A5A5F !important;
+  background-color: #0A5A5F !important;
+}
+
+/* Si hubiera degradados que aclaran el color, los anulamos */
+.hero::after,
+.section-hero::after{
+  content: "";
+  background: transparent !important;
+}
+
+/* Aseguramos que el área de encabezado superior mantenga el mismo tono si lo necesita */
+.topbar,
+.navbar,
+.header-bar{
+  background-color: #0A5A5F;
+}
+
+/* Opcional: mejora de contraste de textos sobre el hero */
+.hero, .section-hero {
+  color: #EAF6F7;
+}
+.hero a, .section-hero a { color: #FFFFFF; }
+
+/* ---- Fin overrides de color ---- */
