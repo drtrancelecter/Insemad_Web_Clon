@@ -1,4 +1,4 @@
-/* INSEMAD — v3: tipografía y botón calcados a la guía */
+/* INSEMAD — v4: corrige 4 diferencias con la guía */
 :root{
   --container: 1200px;
   --radius: 20px;
@@ -25,11 +25,14 @@ body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvet
 
 /* hero */
 .hero{background:linear-gradient(180deg,var(--teal-1),var(--teal-2));color:#fff;border-bottom:1px solid rgba(0,0,0,.12)}
-.hero__content{padding:34px 0 22px}
+.hero__content{padding:26px 0 18px}          /* más compacto */
 .hero__text{max-width:760px}
 h1{
-  font-size:64px; line-height:1.15; letter-spacing:-0.01em; font-weight:900;
+  font-size:56px; line-height:1.13; letter-spacing:-0.01em; font-weight:900;
   color:#F2F8F8; margin:0 0 10px;
+}
+@media (min-width: 1200px){
+  h1{ white-space:nowrap; }                  /* una sola línea como la guía */
 }
 .lead{
   font-size:22px; line-height:1.4; color:rgba(255,255,255,.92); font-weight:500; margin:0 0 12px;
@@ -41,11 +44,11 @@ h1{
 .badge{
   display:inline-flex; align-items:center; padding:12px 18px;
   border-radius:999px; font-size:16px; font-weight:600; color:#111;
-  background:#E9EEF0; border:1px solid #D5DADF;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 1px 0 rgba(0,0,0,.06);
+  background:#F3F7F8; border:1px solid #D6DEE2;     /* más claro */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.40), 0 1px 0 rgba(0,0,0,.05);
 }
 
-/* botón WhatsApp (blanco con anillo naranja como la guía) */
+/* botón WhatsApp (blanco con anillo naranja) */
 .cta{ margin-top:14px; }
 .btn{ display:inline-flex; align-items:center; justify-content:center; border:2px solid transparent; text-decoration:none; }
 .btn--whatsapp{
@@ -56,7 +59,7 @@ h1{
 
 /* media card */
 .media-card{
-  width:clamp(980px, 88vw, 1140px); margin:16px auto 0; background:#fff;
+  width:100%; margin:16px auto 0; background:#fff;   /* ancho total del contenedor */
   border-radius:20px; overflow:hidden; box-shadow: var(--shadow-hero);
 }
 .media-card img{ display:block; width:100%; height:auto; }
