@@ -1,4 +1,3 @@
-// Enrutar anclas tipo SPA (#/ruta) sin romper el scroll del hero.
 (function(){
   function syncActive(){
     const a = document.querySelectorAll('.menu a');
