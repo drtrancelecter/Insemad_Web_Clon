@@ -1,28 +1,12 @@
-// Marca el link activo según el hash
-function setActiveFromHash(){
-  const hash = window.location.hash || "#inicio";
+// Tiny hash router so Home shows only the hero and no extra blocks
+function route(){
+  const hash = (location.hash || '#inicio').slice(1);
   document.querySelectorAll('.nav a').forEach(a=>{
-    if(a.getAttribute('href') === hash){ a.setAttribute('aria-current','page'); }
-    else { a.removeAttribute('aria-current'); }
+    a.classList.toggle('active', a.getAttribute('href')==='#'+hash);
+  });
+  document.querySelectorAll('.route').forEach(r=>{
+    r.hidden = r.dataset.route !== hash;
   });
 }
-window.addEventListener('hashchange', setActiveFromHash);
-window.addEventListener('DOMContentLoaded', ()=>{
-  // Si no hay hash, forzamos #inicio para mantener navegación tipo SPA
-  if(!window.location.hash){ window.location.hash = "#inicio"; }
-  setActiveFromHash();
-  // scroll suave
-  document.querySelectorAll('.nav a').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      // Comportamiento nativo + suavizado
-      const id = a.getAttribute('href');
-      const el = document.querySelector(id);
-      if(el){
-        e.preventDefault();
-        history.pushState(null, "", id);
-        setActiveFromHash();
-        el.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-});
+addEventListener('hashchange', route);
+addEventListener('DOMContentLoaded', route);

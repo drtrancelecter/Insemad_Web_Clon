@@ -3,71 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>INSEMAD SPA — Sitio</title>
-  <link rel="preload" href="assets/img/hero.jpg" as="image">
+  <title>INSEMAD SPA</title>
   <link rel="stylesheet" href="assets/css/brand.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="wrap">
-      <div class="brand">INSEMAD SPA</div>
-      <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#certificacion">Certificación</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#galeria">Galería</a>
-        <a href="#infraestructura">Infraestructura</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
+    <div class="brand">INSEMAD SPA</div>
+    <nav class="nav">
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#certificacion">Certificación</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#galeria">Galería</a>
+      <a href="#infraestructura">Infraestructura</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <main id="inicio">
+  <main id="inicio" class="route" data-route="inicio">
     <section class="hero">
-      <div class="wrap">
-        <h1>Pallets certificados — NIMF‑15</h1>
-        <p class="lead">
-          Ingeniería y servicios madereros con <b>40 años</b> en el rubro.
-          Producción de <b>300.000 pallets/año</b>.
-          <b>20 años</b> operando cámara NIMF‑15 con sensores para exportación.
+      <div class="hero-inner container">
+        <h1>Pallets certificados — NIMF-15</h1>
+        <p>
+          Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
+          Producción de <strong>300.000 pallets/año</strong>. <strong>20 años</strong> operando cámara NIMF‑15 con sensores para exportación.
         </p>
-
-        <div class="pills">
-          <span class="pill">NIMF‑15</span>
-          <span class="pill">Producción anual 300k</span>
-          <span class="pill">Hecho en Chile</span>
+        <div class="chips">
+          <span class="chip">NIMF-15</span>
+          <span class="chip">Producción anual 300k</span>
+          <span class="chip">Hecho en Chile</span>
         </div>
-
-        <a class="btn-ws" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
 
         <figure class="hero-card">
           <img src="assets/img/hero.jpg" alt="Planta de pallets INSEMAD">
         </figure>
       </div>
     </section>
-
-    <!-- Secciones ancla (contenido placeholder por ahora) -->
-    <section id="productos" class="section blank"><div class="wrap"><h2>Productos</h2><p>Contenido aquí…</p></div></section>
-    <section id="certificacion" class="section blank"><div class="wrap"><h2>Certificación</h2><p>Contenido aquí…</p></div></section>
-    <section id="nosotros" class="section blank"><div class="wrap"><h2>Nosotros</h2><p>Contenido aquí…</p></div></section>
-    <section id="galeria" class="section blank"><div class="wrap"><h2>Galería</h2><p>Contenido aquí…</p></div></section>
-    <section id="infraestructura" class="section blank"><div class="wrap"><h2>Infraestructura</h2><p>Contenido aquí…</p></div></section>
-    <section id="contacto" class="section blank"><div class="wrap"><h2>Contacto</h2><p>Contenido aquí…</p></div></section>
+    <div class="divider"></div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="dot"></span> INSEMAD SPA
+        <span class="spacer"></span>
+        © 2025 INSEMAD SPA. Todos los derechos reservados.
+      </div>
+    </footer>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <span class="dot"></span> INSEMAD SPA
-      <span class="copy">© 2025 INSEMAD SPA. Todos los derechos reservados.</span>
-    </div>
-  </footer>
+  <!-- Secciones internas (no visibles en Inicio) -->
+  <main id="productos" class="route" data-route="productos" hidden>
+    <section class="container pad">
+      <h2>Productos</h2>
+      <p>Contenido aquí…</p>
+    </section>
+  </main>
 
-  <div class="float-btns" aria-hidden="true">
-    <button class="fbtn f1" title="Decorativo"></button>
-    <button class="fbtn f2" title="Decorativo"></button>
-    <button class="fbtn f3" title="Decorativo"></button>
-  </div>
+  <main id="certificacion" class="route" data-route="certificacion" hidden>
+    <section class="container pad">
+      <h2>Certificación</h2>
+      <p>Contenido aquí…</p>
+    </section>
+  </main>
+
+  <main id="nosotros" class="route" data-route="nosotros" hidden>
+    <section class="container pad">
+      <h2>Nosotros</h2>
+      <p>Contenido aquí…</p>
+    </section>
+  </main>
+
+  <main id="galeria" class="route" data-route="galeria" hidden>
+    <section class="container pad">
+      <h2>Galería</h2>
+      <p>Contenido aquí…</p>
+    </section>
+  </main>
+
+  <main id="infraestructura" class="route" data-route="infraestructura" hidden>
+    <section class="container pad">
+      <h2>Infraestructura</h2>
+      <p>Contenido aquí…</p>
+    </section>
+  </main>
+
+  <main id="contacto" class="route" data-route="contacto" hidden>
+    <section class="container pad">
+      <h2>Contacto</h2>
+      <p>Contenido aquí…</p>
+    </section>
+  </main>
 
   <script src="assets/js/main.js"></script>
 </body>
