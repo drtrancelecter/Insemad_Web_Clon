@@ -1,76 +1,114 @@
-/* INSEMAD — v4: corrige 4 diferencias con la guía */
+
+/* ============ INSEMAD SPA — visual overrides (safe) ============ */
+/* Drop this file as assets/css/brand.css or replace existing brand.css */
+/* Purpose: match guide typography, chips and WhatsApp button styling without breaking layout */
+
 :root{
-  --container: 1200px;
-  --radius: 20px;
-  --shadow-hero: 0 18px 36px rgba(0,0,0,.14), 0 12px 16px rgba(0,0,0,.10);
-  --teal-1: #0d6e77;
-  --teal-2: #0a6069;
-  --whiteband-h: 260px;
-  --c-text:#0e0e0e; --c-border:#e5e7eb;
-}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
-body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--c-text);background:#f6f7fb}
-.container{width:min(100% - 32px, var(--container));margin-inline:auto}
-.page{min-height:100dvh;display:flex;flex-direction:column}
-
-/* topbar */
-.topbar{background:#fff;border-bottom:1px solid var(--c-border);position:sticky;top:0;z-index:20}
-.topbar__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-weight:800;letter-spacing:.3px}
-.menu{display:flex;gap:18px;flex-wrap:wrap}
-.menu a{color:#111;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-.menu a:hover{background:#f0f2f5}
-.menu a.active{background:#111;color:#fff}
-
-/* hero */
-.hero{background:linear-gradient(180deg,var(--teal-1),var(--teal-2));color:#fff;border-bottom:1px solid rgba(0,0,0,.12)}
-.hero__content{padding:26px 0 18px}          /* más compacto */
-.hero__text{max-width:760px}
-h1{
-  font-size:56px; line-height:1.13; letter-spacing:-0.01em; font-weight:900;
-  color:#F2F8F8; margin:0 0 10px;
-}
-@media (min-width: 1200px){
-  h1{ white-space:nowrap; }                  /* una sola línea como la guía */
-}
-.lead{
-  font-size:22px; line-height:1.4; color:rgba(255,255,255,.92); font-weight:500; margin:0 0 12px;
-}
-.lead strong{ font-weight:800; color:#ffffff; }
-
-/* chips */
-.badges{ display:flex; gap:12px; flex-wrap:wrap; margin:8px 0 14px; }
-.badge{
-  display:inline-flex; align-items:center; padding:12px 18px;
-  border-radius:999px; font-size:16px; font-weight:600; color:#111;
-  background:#F3F7F8; border:1px solid #D6DEE2;     /* más claro */
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.40), 0 1px 0 rgba(0,0,0,.05);
+  --teal:#0E6770;
+  --teal-dark:#0B5057;
+  --copper:#C57A35;   /* subtle copper/orange for outlines */
+  --ink:#0F1720;
+  --paper:#ffffff;
+  --shadow: 0 10px 20px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.06);
 }
 
-/* botón WhatsApp (blanco con anillo naranja) */
-.cta{ margin-top:14px; }
-.btn{ display:inline-flex; align-items:center; justify-content:center; border:2px solid transparent; text-decoration:none; }
-.btn--whatsapp{
-  background:#fff; color:#111; border-color:#111;
-  font-size:22px; font-weight:900; padding:14px 22px; border-radius:20px;
-  box-shadow: 0 0 0 6px #F39B3D, 0 10px 20px rgba(0,0,0,.15);
+/* ---------- Hero typography ---------- */
+.hero h1,
+.hero .hero-title,
+h1.hero-title{
+  font-size: clamp(32px, 3.6vw + 14px, 64px) !important;
+  line-height: 1.1 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+  margin: 0 0 14px 0;
 }
 
-/* media card */
-.media-card{
-  width:100%; margin:16px auto 0; background:#fff;   /* ancho total del contenedor */
-  border-radius:20px; overflow:hidden; box-shadow: var(--shadow-hero);
+.hero p,
+.hero .lead,
+p.lead{
+  font-size: clamp(16px, 0.9vw + 12px, 24px) !important;
+  line-height: 1.6 !important;
+  color: rgba(255,255,255,.95);
+  margin: 0 0 20px 0;
 }
-.media-card img{ display:block; width:100%; height:auto; }
 
-/* franja blanca inferior */
-.whiteband{background:#fff;min-height:var(--whiteband-h);display:flex;align-items:center}
-.whiteband .marcador{color:#5b6070;font-weight:700}
+/* Emphasis words inside the lead */
+.hero .lead b,
+.hero .lead strong,
+.hero p b,
+.hero p strong{
+  font-weight: 800;
+  color: var(--paper);
+}
 
-/* footer */
-.footer{background:#fff;padding:24px 0;border-top:1px solid var(--c-border);color:#666;font-size:14px}
+/* ---------- Chips (NIMF-15 / Producción / Hecho en Chile) ---------- */
+.tag, .chip, .badge,
+.hero .tags .tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.65rem 1.1rem !important;
+  border-radius: 9999px !important;
+  background: var(--paper) !important;
+  color: var(--teal-dark) !important;
+  border: 2px solid rgba(0,0,0,.06) !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  font-weight: 700;
+  font-size: clamp(14px, .4vw + 12px, 18px) !important;
+}
 
-/* responsive */
-@media (max-width:920px){:root{--whiteband-h:300px}.media-card{margin-top:14px}}
-@media (max-width:560px){:root{--whiteband-h:340px}.menu{gap:10px}}
+/* Space between chips */
+.tag + .tag,
+.chip + .chip,
+.badge + .badge{ margin-left:.6rem; }
+
+/* ---------- WhatsApp primary button ---------- */
+.btn, .button, .cta, .btn-whatsapp{
+  font-size: clamp(15px, .5vw + 13px, 20px) !important;
+  font-weight: 800 !important;
+  padding: .85rem 1.3rem !important;
+  border-radius: 14px !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  border: 3px solid var(--copper) !important;
+  box-shadow: 0 2px 0 rgba(0,0,0,.03), inset 0 0 0 2px rgba(255,255,255,.8);
+  transition: transform .08s ease, box-shadow .2s ease;
+}
+
+.btn-whatsapp:hover,
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* Ensure WhatsApp icon (if any) aligns nicely */
+.btn-whatsapp svg,
+.btn svg{ height:1.2em; width:1.2em; margin-right:.5rem; }
+
+/* ---------- Hero media card (main image) ---------- */
+.hero-card,
+.hero .media,
+.hero img.main,
+.hero .hero-img{
+  border-radius: 18px !important;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Remove possible hairline gap under images */
+img, svg, canvas, video{ display:block; }
+
+/* ---------- Footer fine text ---------- */
+footer, .footer, .copyright{
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+}
+
+/* ---------- Safety: keep layout intact on small screens ---------- */
+@media (max-width: 768px){
+  .tag, .chip, .badge{ padding:.55rem .9rem !important; }
+  .btn, .btn-whatsapp{ padding:.8rem 1.1rem !important; }
+}
+
+/* ================================================================ */
