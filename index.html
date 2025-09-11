@@ -1,65 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INSEMAD SPA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/brand.css">
+  <link rel="stylesheet" href="assets/css/brand.css" />
 </head>
 <body>
+  <!-- Top nav -->
   <header class="topbar">
-    <div class="wrap">
+    <div class="container nav">
       <div class="brand">INSEMAD SPA</div>
-      <nav class="nav" aria-label="Secciones">
-        <a href="#inicio" class="link">Inicio</a>
-        <a href="#productos" class="link">Productos</a>
-        <a href="#certificacion" class="link">Certificación</a>
-        <a href="#nosotros" class="link">Nosotros</a>
-        <a href="#galeria" class="link">Galería</a>
-        <a href="#infraestructura" class="link">Infraestructura</a>
-        <a href="#contacto" class="link">Contacto</a>
+      <nav class="menu">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#certificacion">Certificación</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#infraestructura">Infraestructura</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main id="inicio">
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-headline">Pallets certificados — <span class="accent">NIMF-15</span></div>
-        <p class="hero-sub">
-          Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
-          Producción de <strong>300.000 pallets/año</strong>.
-          <strong>20 años</strong> operando cámara NIMF-15 con sensores para exportación.
-        </p>
-        <div class="chips">
-          <span class="chip">NIMF-15</span>
-          <span class="chip">Producción anual 300k</span>
-          <span class="chip">Hecho en Chile</span>
-        </div>
-        <a class="btn-ws" target="_blank" rel="noopener" href="https://wa.me/56900000000">Escríbenos por WhatsApp</a>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h1 class="hero-title">Pallets certificados — NIMF-15</h1>
+      <p class="hero-sub">
+        Ingeniería y servicios madereros con <b>40 años</b> en el rubro.
+        Producción de <b>300.000 pallets/año</b>.
+        <b>20 años</b> operando cámara NIMF-15 con sensores para exportación.
+      </p>
 
-        <figure class="hero-card">
-          <img src="assets/img/hero.jpg" alt="Planta de pallets INSEMAD" loading="eager">
-        </figure>
+      <div class="hero-chips">
+        <span class="chip">NIMF-15</span>
+        <span class="chip">Producción anual 300k</span>
+        <span class="chip">Hecho en Chile</span>
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="wrap">
-        <div class="copy">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
+      <a class="btn-wsp" target="_blank" rel="noopener" href="https://wa.me/569XXXXXXXX">Escríbenos por WhatsApp</a>
+
+      <div class="hero-card">
+        <img class="hero-img" src="assets/img/hero.jpg" alt="Imagen principal de la planta INSEMAD" />
       </div>
-    </footer>
-  </main>
+    </div>
+  </section>
 
-  <section id="productos" class="anchor"></section>
-  <section id="certificacion" class="anchor"></section>
-  <section id="nosotros" class="anchor"></section>
-  <section id="galeria" class="anchor"></section>
-  <section id="infraestructura" class="anchor"></section>
-  <section id="contacto" class="anchor"></section>
+  <footer class="footer">
+    <div class="container small">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
