@@ -1,87 +1,94 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #075E6C;
-  color: white;
+/* ----------- Base & layout ----------- */
+:root{
+  --teal:#0e6c77;
+  --teal-800:#0b5d66;
+  --paper:#f3f5f6;
+  --ink:#1f2a2e;
+  --copper:#c57c47;
+  --shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  color:var(--paper);
+  background:var(--paper);
+}
+a{color:inherit;text-decoration:none}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ----------- Top bar ----------- */
+.topbar{
+  background:#fff;
+  border-bottom:1px solid #e7eaee;
+  position:sticky;top:0;z-index:50;
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:8px;color:#091b22;font-weight:600}
+.brand-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--copper);display:inline-block}
+.nav a{padding:6px 10px;border-radius:6px;color:#3c4a50}
+.nav a.active{background:#eef3f5;font-weight:600}
+
+/* ----------- Hero block ----------- */
+.hero-block{
+  background: radial-gradient(1200px 400px at 50% -200px, rgba(255,255,255,.15), transparent 60%),
+              var(--teal);
+  padding: 64px 0 32px;
+}
+.hero-block h1{
+  font-size: clamp(26px, 3.2vw, 38px);
+  margin: 0 0 8px;
+  font-weight: 800;
+}
+.lead{max-width:840px;margin:0 0 14px;color:#e5eef0}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 12px}
+.badge{
+  background:#f3f6f7;
+  color:#0a2b34;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:12px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 1px 2px rgba(0,0,0,.06);
+}
+.cta{
+  display:inline-block;
+  margin: 0 0 18px;
+  background:#fff;border:2px solid var(--copper);color:#0a2b34;
+  padding:9px 14px;border-radius:12px;font-weight:700;
+  transition:.2s transform, .2s box-shadow;
+  box-shadow:0 2px 0 rgba(0,0,0,.06);
+}
+.cta:hover{transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.18)}
+
+.hero-figure{margin:12px 0 0}
+.hero-img{
+  width:100%;height:auto;display:block;
+  border-radius:12px;
+  box-shadow: var(--shadow);
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 0;
-  background: white;
-}
+/* ----------- Footer ----------- */
+.site-footer{background:#fff; color:#5d6a71; border-top:1px solid #e7eaee; margin-top:8px}
+.site-footer .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;height:48px}
+.foot-left .brand-dot{vertical-align:-2px}
 
-header nav ul li a {
-  text-decoration: none;
-  color: black;
+/* ----------- Decorative rail buttons ----------- */
+.rail{
+  position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:60;
 }
-
-.hero {
-  text-align: center;
-  padding: 2rem;
+.rail-btn{
+  width:48px;height:48px;border:none;border-radius:14px;
+  background:#111;box-shadow:var(--shadow);cursor:default;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
 }
+.rail-arrow{background-image:url("../img/btn_arrow.png")}
+.rail-phone{background-image:url("../img/btn_phone.png")}
+.rail-in{background-image:url("../img/btn_linkedin.png")}
 
-.hero-text h1 {
-  margin-bottom: 1rem;
-}
-
-.hero-image img {
-  max-width: 80%;
-  border-radius: 8px;
-  margin-top: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.badges {
-  margin: 1rem 0;
-}
-
-.badge {
-  background: #444;
-  color: white;
-  padding: 0.3rem 0.6rem;
-  margin: 0 0.3rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-.cta {
-  background: #006400;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.cta:hover {
-  background: #228B22;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: white;
-  color: #444;
-}
-
-.dock {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.dock-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+/* Responsive helper */
+@media (max-width:700px){
+  .nav{display:none}
+  .wrap{padding:0 16px}
 }
