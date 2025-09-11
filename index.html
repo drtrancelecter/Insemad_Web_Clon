@@ -1,80 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>INSEMAD SPA</title>
-  <link rel="preload" as="image" href="/assets/img/hero.jpg">
-  <link rel="stylesheet" href="./assets/css/brand.css" />
-</head>
-<body>
-  <!-- Topbar -->
-  <header class="topbar">
-    <div class="wrap">
-      <div class="brand">
-        <span class="dot"></span>
-        <strong>INSEMAD SPA</strong>
-      </div>
-      <nav class="nav">
-        <a href="#inicio" class="active">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#certificacion">Certificación</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#galeria">Galería</a>
-        <a href="#infraestructura">Infraestructura</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main>
-    <!-- INICIO (maestra) -->
-    <section id="inicio" class="view active">
-      <div class="hero-plate">
-        <h1>Pallets certificados — NIMF-15</h1>
-        <p>Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
-           Producción de <strong>300.000 pallets/año</strong>. <strong>20 años</strong> operando cámara NIMF-15 con sensores para exportación.</p>
-        <div class="badges">
-          <span class="chip">NIMF-15</span>
-          <span class="chip">Producción anual 300k</span>
-          <span class="chip">Hecho en Chile</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>INSEMAD SPA</title>
+    <link rel="stylesheet" href="assets/css/brand.css" />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">
+          <span class="dot"></span>
+          <strong>INSEMAD SPA</strong>
         </div>
-        <a class="cta" href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
-
-        <figure class="hero-card">
-          <img src="./assets/img/hero.jpg" alt="Planta de pallets INSEMAD" />
-        </figure>
+        <nav class="nav">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#productos" class="nav-link">Productos</a>
+          <a href="#certificacion" class="nav-link">Certificación</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#galeria" class="nav-link">Galería</a>
+          <a href="#infraestructura" class="nav-link">Infraestructura</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Otras secciones (contenidos placeholder, se personalizan luego) -->
-    <section id="productos" class="view"><div class="container"><h2>Productos</h2><p>Catálogo resumido: pallets, bins, cajones, maderas y piezas complementarias.</p></div></section>
-    <section id="certificacion" class="view"><div class="container"><h2>Certificación</h2><p>NIMF‑15, procedimientos y controles.</p></div></section>
-    <section id="nosotros" class="view"><div class="container"><h2>Nosotros</h2><p>40 años de oficio en la madera.</p></div></section>
-    <section id="galeria" class="view"><div class="container"><h2>Galería</h2><p>Imágenes y recorridos.</p></div></section>
-    <section id="infraestructura" class="view"><div class="container"><h2>Infraestructura</h2><p>Cámaras, maquinarias y logística.</p></div></section>
-    <section id="contacto" class="view"><div class="container"><h2>Contacto</h2><p>Formulario y datos de contacto.</p></div></section>
-  </main>
+    <!-- Sections wrapper -->
+    <main id="app">
+      <!-- INICIO -->
+      <section id="inicio" class="route is-visible">
+        <section class="hero">
+          <div class="container hero-inner">
+            <h1 class="hero-headline">Pallets certificados — NIMF-15</h1>
+            <p class="hero-subcopy">
+              Ingeniería y servicios madereros con <strong>40 años</strong> en el rubro.
+              Producción de <strong>300.000 pallets/año</strong>.
+              <strong>20 años</strong> operando cámara NIMF-15 con sensores para exportación.
+            </p>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="wrap">
-      <div class="brand">
-        <span class="dot"></span>
-        INSEMAD SPA
-      </div>
-      <div class="copy">© 2025 INSEMAD SPA. Todos los derechos reservados.</div>
-    </div>
-  </footer>
+            <div class="badges">
+              <span class="chip">NIMF-15</span>
+              <span class="chip">Producción anual 300k</span>
+              <span class="chip">Hecho en Chile</span>
+            </div>
 
-  <!-- Dock decorativa -->
-  <div class="dock">
-    <div class="btn btn-arrow" title="decorativo"></div>
-    <div class="btn btn-call"  title="decorativo"></div>
-    <div class="btn btn-in"    title="decorativo"></div>
-  </div>
+            <div class="cta-row">
+              <a class="btn-whatsapp" href="https://wa.me/56900000000" target="_blank" rel="noopener">
+                Escríbenos por WhatsApp
+              </a>
+            </div>
 
-  <script src="./assets/js/main.js"></script>
-</body>
+            <figure class="hero-card">
+              <img src="assets/img/hero.jpg" alt="Planta de pallets INSEMAD" />
+            </figure>
+          </div>
+        </section>
+        <div class="section-divider"></div>
+        <footer class="copyright">
+          <div class="container">
+            <span class="dot copper"></span>
+            INSEMAD SPA&nbsp; © 2025 INSEMAD SPA. Todos los derechos reservados.
+          </div>
+        </footer>
+      </section>
+
+      <!-- OTRAS RUTAS (placeholders para la demo del router) -->
+      <section id="productos" class="route"><div class="container pad"><h2>Productos</h2><p>Contenido de productos.</p></div></section>
+      <section id="certificacion" class="route"><div class="container pad"><h2>Certificación</h2><p>Contenido de certificación.</p></div></section>
+      <section id="nosotros" class="route"><div class="container pad"><h2>Nosotros</h2><p>Contenido de nosotros.</p></div></section>
+      <section id="galeria" class="route"><div class="container pad"><h2>Galería</h2><p>Contenido de galería.</p></div></section>
+      <section id="infraestructura" class="route"><div class="container pad"><h2>Infraestructura</h2><p>Contenido de infraestructura.</p></div></section>
+      <section id="contacto" class="route"><div class="container pad"><h2>Contacto</h2><p>Contenido de contacto.</p></div></section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
