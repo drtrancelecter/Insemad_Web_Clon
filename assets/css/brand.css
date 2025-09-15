@@ -61,3 +61,6 @@ html,body{
 
 /* Ajuste espaciado hero – Paso 1 */
 .hero{ padding: 96px 0 120px; }  /* top 96, bottom 120 */
+
+/* Ajuste espaciado hero – Paso 2 */
+.hero{ padding: 96px 0 140px; }  /* top 96, bottom 140 */
