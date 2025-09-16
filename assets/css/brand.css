@@ -95,3 +95,42 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
 .btn-float.black { background: #111111; }
 .btn-float.green { background: #4CAF50; } /* verde clásico */
 .btn-float.blue { background: #0a66c2; }  /* azul LinkedIn oficial */
+/* === Floating Buttons restaurados (versión elegante) === */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.btn-float {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px; /* cuadrado elegante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+}
+
+.btn-float svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* Colores vivos */
+.btn-float.black { background: #111111; }
+.btn-float.green { background: #4CAF50; } /* verde clásico */
+.btn-float.blue { background: #0a66c2; }  /* azul LinkedIn oficial */
