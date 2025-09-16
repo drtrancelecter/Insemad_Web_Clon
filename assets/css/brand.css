@@ -55,3 +55,36 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
 @media (min-width: 1000px){
   .hero-title{ font-size: 44px; }
 }
+
+/* === Floating Buttons === */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.btn-float {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.btn-float:hover {
+  transform: scale(1.1);
+}
+
+.btn-float.black { background: #000; }
+.btn-float.green { background: #4CAF50; }
+.btn-float.blue { background: #0077b5; }
