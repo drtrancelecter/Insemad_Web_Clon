@@ -15,12 +15,12 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
 .hero-title{color:#fff;font-size:36px;line-height:1.1;margin:0 0 8px 0;font-weight:800}
 .hero-sub{color:#d9f1f3;margin:0 0 14px 0;font-weight:600}
 .hero-chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:14px}
-.chip{background:#fff;color:var(--teal);padding:.55rem 1.1rem;border-radius:28px;font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.06);white-space:nowrap}
+.chip{background:#fff;color:var(--teal);padding:.55rem 1.1rem;border-radius:28px;font-weight:700;box-shadow: none;white-space:nowrap}
 .btn-wsp{display:inline-block;background:#fff;color:var(--teal);font-weight:700;padding:.65rem 1rem;border-radius:12px;text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,.06)}
 .btn-wsp:hover{transform:translateY(-1px)}
 
 /* Card centrada bajo el texto */
-.hero-card{background:#fff;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.18);padding:8px;width:100%;max-width:720px;margin:0 auto}
+.hero-card{background:#fff;border-radius:16px;box-shadow: none;padding:8px;width:100%;max-width:720px;margin:0 auto}
 .hero-card img{display:block;width:100%;height:auto;border-radius:12px}
 
 /* Footer */
@@ -100,7 +100,7 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: none;
   transition: transform 0.2s ease;
 }
 
