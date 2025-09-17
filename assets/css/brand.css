@@ -162,7 +162,7 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
 
 /* Ajuste final de botones musgo con verde oficial (#5a7720) y altura reducida */
 .btn-musgo, .btn-musgo-lg {
-  background-color: #5a7720 !important; /* Verde oficial */
+  background-color: #25D366 !important; /* Verde oficial */
   color: #fff !important;
   font-weight: 600;
   font-size: 1.15rem;
