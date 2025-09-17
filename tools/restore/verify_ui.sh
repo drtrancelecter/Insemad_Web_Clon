@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/../.."
 count=$(grep -c '<div class="floating-buttons">' index.html || true)
 if [ "$count" -ne 1 ]; then
   echo "ERROR_floating_buttons_instances=${count}"
