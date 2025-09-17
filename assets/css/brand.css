@@ -159,3 +159,21 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
 .btn-musgo:hover {
   background-color: #244040; /* Musgo más oscuro al hover */
 }
+
+/* Ajuste final de botones musgo con verde oficial (#5a7720) y altura reducida */
+.btn-musgo, .btn-musgo-lg {
+  background-color: #5a7720 !important; /* Verde oficial */
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 0.9rem 2rem;  /* menos altura, ancho equilibrado */
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0.8rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-musgo:hover, .btn-musgo-lg:hover {
+  background-color: #4a631a; /* tono más oscuro al hover */
+}
