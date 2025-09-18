@@ -16,8 +16,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', 
-Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 
+sans-serif;
   color: #17363a;
   background: #fff;
 }
@@ -71,22 +71,18 @@ Arial, sans-serif;
   opacity: 1;
 }
 
-/* === HERO === */
-.hero {
-  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
-  min-height: var(--hero-height) !important;
-  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* === HERO FIJO CHARLOTTE === */
+.hero,
+#inicio.hero,
 #productos.hero {
-  min-height: var(--hero-height) !important;
-  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
+  height: var(--hero-height) !important;
+  min-height: unset !important;
+  padding: 0 !important;
+  overflow: hidden !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%) !important;
 }
 
 .hero-inner {
