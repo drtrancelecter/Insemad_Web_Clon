@@ -185,3 +185,28 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
   align-items: center;
   justify-content: center;
 }
+
+/* === Normalización Header (Inicio vs Productos) === */
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .brand {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 40px; /* coherencia entre páginas */
+  white-space: nowrap;
+}
+
+.topbar .nav a {
+  font-size: 16px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.topbar .nav a.active {
+  font-weight: 600;
+  border-bottom: 2px solid #004d40; /* opcional: destacar activo */
+}
