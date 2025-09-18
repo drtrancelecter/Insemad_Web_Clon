@@ -250,3 +250,29 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
   text-decoration:none; font-weight:600; transition:opacity .2s ease;
 }
 .cta .btn:hover { opacity:.9; }
+/* ====== UNIFICACIÓN HERO (Inicio = Productos) ====== */
+:root{
+  /* Ajusta si quieres milimétrico; estos valores igualan proporciones de Inicio */
+  --hero-min: 520px;
+  --hero-pad-top: 24px;
+  --hero-pad-bottom: 120px;
+}
+
+/* Aplica a cualquier bloque .hero (incluye Inicio) */
+.hero{
+  min-height: var(--hero-min);
+  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fuerza que Productos herede EXACTO lo mismo (sobrescribe reglas previas) */
+#productos.hero{
+  min-height: var(--hero-min) !important;
+  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
+}
+
+/* Limpieza de márgenes colapsados y bordes fantasmas */
+body { margin: 0; }
+.hero + .container, .hero + section { margin-top: 0; }
