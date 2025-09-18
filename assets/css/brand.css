@@ -1,34 +1,8 @@
-:root {
-  --hero-height: 600px;
-  --hero-pad-top: 24px;
-  --hero-pad-bottom: 120px;
-}
 
-/* Fuerza scroll vertical estable */
-html {
-  overflow-y: scroll;
+/* Blindaje visual: evitar saltos por render inconsistente */
+.invisible-placeholder {
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  visibility: hidden;
 }
-
-.hero,
-#inicio.hero,
-#productos.hero {
-  min-height: var(--hero-height) !important;
-  max-height: var(--hero-height) !important;
-  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Estabiliza contenido interno (si usa contenedores) */
-.hero > .wrap,
-#inicio.hero > .wrap,
-#productos.hero > .wrap {
-  max-width: 660px;
-  width: 100%;
-  margin: 0 auto;
-}
-
