@@ -4,8 +4,9 @@
   --hero-pad-bottom: 120px;
 }
 
+/* Fuerza scroll vertical estable */
 html {
-  overflow-y: scroll; /* Estabiliza scroll entre secciones */
+  overflow-y: scroll;
 }
 
 .hero,
@@ -17,8 +18,17 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16); /* Mantener sombra */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estabiliza contenido interno (si usa contenedores) */
+.hero > .wrap,
+#inicio.hero > .wrap,
+#productos.hero > .wrap {
   max-width: 660px;
-  margin-top: 8px;
+  width: 100%;
+  margin: 0 auto;
 }
 
