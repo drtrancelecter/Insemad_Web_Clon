@@ -210,3 +210,43 @@ html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe U
   font-weight: 600;
   border-bottom: 2px solid #004d40; /* opcional: destacar activo */
 }
+
+/* === Hero productos igual que inicio === */
+#productos.hero {
+  min-height: 550px;           /* igual que Inicio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Productos: tarjetas elegantes === */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.productos-grid .card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.productos-grid .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+.productos-grid .card img { max-width: 100%; height: auto; border-radius: 6px; margin-bottom: .75rem; }
+.productos-grid .card h2 { font-size: 1.1rem; color: #0E6668; margin: .25rem 0 .5rem; }
+.productos-grid .card p  { color: #555; font-size: .95rem; }
+
+/* CTA inferior coherente */
+.cta { display:flex; gap:1rem; justify-content:center; padding: 2rem 0 3rem; }
+.cta .btn {
+  background:#0E6668; color:#fff; padding:.9rem 1.2rem; border-radius:8px;
+  text-decoration:none; font-weight:600; transition:opacity .2s ease;
+}
+.cta .btn:hover { opacity:.9; }
