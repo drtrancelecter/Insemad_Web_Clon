@@ -1,295 +1,185 @@
-:root{ --teal:#0e6771; --teal-dark:#0b555e; --ink:#0f3b3f; --paper:#ffffff; }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:#17363a;background:#fff}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.topbar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e5eef0}
-.topbar .container{display:flex;align-items:center;justify-content:space-between;height:54px}
-.brand{font-weight:700;letter-spacing:.02em;color:var(--ink)}
-.nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-weight:500;opacity:.9}
-.nav a:hover{opacity:1}
+/* ==== CSS MODIFICADO POR CHARLOTTE ====
+   Objetivo: Fijar "INSEMAD SPA" sin cambios visuales al hacer scroll
+   Política: no se permite edición manual → se reemplaza todo desde terminal
+*/
 
-/* HERO */
-.hero{background:linear-gradient(180deg,var(--teal) 0%, var(--teal-dark) 100%);padding:56px 0 28px 0}
-.hero-inner{display:flex;flex-direction:column;align-items:center;gap:18px}
-.hero-copy{width:100%;text-align:center}
-.hero-title{color:#fff;font-size:36px;line-height:1.1;margin:0 0 8px 0;font-weight:800}
-.hero-sub{color:#d9f1f3;margin:0 0 14px 0;font-weight:600}
-.hero-chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:14px}
-.chip{background:#fff;color:var(--teal);padding:.55rem 1.1rem;border-radius:28px;font-weight:700;box-shadow: none;white-space:nowrap}
-.btn-wsp{display:inline-block;background:#fff;color:var(--teal);font-weight:700;padding:.65rem 1rem;border-radius:12px;text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,.06)}
-.btn-wsp:hover{transform:translateY(-1px)}
-
-/* Card centrada bajo el texto */
-.hero-card{background:#fff;border-radius:16px;box-shadow: none;padding:8px;width:100%;max-width:720px;margin:0 auto}
-.hero-card img{display:block;width:100%;height:auto;border-radius:12px}
-
-/* Footer */
-.site-footer{padding:16px 0;text-align:center;color:#436d73;background:#fff}
-.site-footer small{opacity:.8}
-
-/* No se cambia a dos columnas en desktop; se mantiene centrado como la guía */
-
-
-/* === Fine-tuning to match GUIDE proportions === */
-.hero{padding:68px 0 36px 0}
-.hero-inner{gap:22px}
-.hero-title{margin-bottom:10px}
-.hero-sub{margin-bottom:16px}
-.hero-chips{gap:16px; margin-bottom:18px}
-.chip{padding:.6rem 1.2rem}
-.btn-wsp{margin-top:4px}
-
-.hero-card{max-width:660px; margin-top:8px; box-shadow:0 10px 30px rgba(0,0,0,.16)}
-.site-footer{padding:18px 0}
-
-
-/* === Title match to GUIDE === */
-.hero-title{
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 1.08;
-  letter-spacing: 0.2px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-@media (min-width: 1000px){
-  .hero-title{ font-size: 44px; }
-}
-
-/* === Floating Buttons ajustados por Charlotte === */
-.floating-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 999;
-}
-
-
-
-
-
-
-/* Colores vivos */
-
-
-
-
-
-
-/* Colores vivos */
-
-/* === Floating Buttons final — Charlotte v1 === */
-.floating-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 999;
-}
-
-.btn-float {
-  width: 60px;
-  height: 60px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-  box-shadow: none;
-  transition: transform 0.2s ease;
-}
-
-.btn-float:hover {
-  transform: scale(1.05);
-}
-
-.btn-float svg {
-  width: 28px;
-  height: 28px;
-  fill: white;
-}
-
-.btn-float.black { background: #111111; }
-.btn-float.green { background: #4B7228; }  /* verde musgo según guía */
-.btn-float.blue  { background: #0a66c2; }  /* azul LinkedIn oficial */
-
-
-/* ===== Charlotte FINAL OVERRIDES (clon guía) ===== */
-.btn-float{
-  box-shadow: none !important;
-}
-.btn-float img{
-  filter: none !important;
-  box-shadow: none !important;
-}
-.btn-float.black{ background: #000000 !important; }
-.btn-float.green{ background: #5a7720 !important; }
-.btn-float.blue{  background: #0077B5 !important; }
-/* ===== END OVERRIDES ===== */
-.btn-float{
-  box-shadow: none !important;
-}
-.btn-float img{
-  filter: none !important;
-  box-shadow: none !important;
-}
-.btn-float.black{ background: #000000 !important; }
-.btn-float.green{ background: #5a7720 !important; }
-.btn-float.blue{  background: #0077B5 !important; }
-
-/* Botones musgo estilo Palosa.de */
-.btn-musgo {
-  display: inline-block;
-  background-color: #2f4f4f; /* Verde musgo */
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.7rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  margin: 0.6rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-musgo:hover {
-  background-color: #244040; /* Musgo más oscuro al hover */
-}
-
-/* Ajuste final de botones musgo con verde oficial (#5a7720) y altura reducida */
-.btn-musgo, .btn-musgo-lg {
-  background-color: #0E6668 !important; /* Verde oficial */
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.7rem 2rem;  /* menos altura, ancho equilibrado */
-  border-radius: 5px;
-  text-decoration: none;
-  margin: 0.8rem;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.btn-musgo:hover, .btn-musgo-lg:hover {
-  background-color: #0A4E4F; /* tono más oscuro al hover */
-}
-
-/* === Hero productos igual que inicio === */
-#productos.hero {
-  min-height: 550px; /* altura idéntica al bloque Inicio */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* === Normalización Header (Inicio vs Productos) === */
-.topbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topbar .brand {
-  font-size: 20px;
-  font-weight: 700;
-  margin-right: 40px; /* coherencia entre páginas */
-  white-space: nowrap;
-}
-
-.topbar .nav a {
-  font-size: 16px;
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.topbar .nav a.active {
-  font-weight: 600;
-  border-bottom: 2px solid #004d40; /* opcional: destacar activo */
-}
-
-/* === Hero productos igual que inicio === */
-#productos.hero {
-  min-height: 550px;           /* igual que Inicio */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* === Productos: tarjetas elegantes === */
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 2rem;
-  padding: 3rem 0;
-}
-.productos-grid .card {
-  background: #fff;
-  border: 1px solid #e9ecef;
-  border-radius: 10px;
-  padding: 1.25rem;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.productos-grid .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-}
-.productos-grid .card img { max-width: 100%; height: auto; border-radius: 6px; margin-bottom: .75rem; }
-.productos-grid .card h2 { font-size: 1.1rem; color: #0E6668; margin: .25rem 0 .5rem; }
-.productos-grid .card p  { color: #555; font-size: .95rem; }
-
-/* CTA inferior coherente */
-.cta { display:flex; gap:1rem; justify-content:center; padding: 2rem 0 3rem; }
-.cta .btn {
-  background:#0E6668; color:#fff; padding:.9rem 1.2rem; border-radius:8px;
-  text-decoration:none; font-weight:600; transition:opacity .2s ease;
-}
-.cta .btn:hover { opacity:.9; }
-/* ====== UNIFICACIÓN HERO (Inicio = Productos) ====== */
-:root{
-  /* Ajusta si quieres milimétrico; estos valores igualan proporciones de Inicio */
-  --hero-min: 520px;
-  --hero-pad-top: 24px;
-  --hero-pad-bottom: 120px;
-}
-
-/* Aplica a cualquier bloque .hero (incluye Inicio) */
-.hero{
-  min-height: var(--hero-min);
-  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Fuerza que Productos herede EXACTO lo mismo (sobrescribe reglas previas) */
-#productos.hero{
-  min-height: var(--hero-min) !important;
-  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
-}
-
-/* Limpieza de márgenes colapsados y bordes fantasmas */
-body { margin: 0; }
-.hero + .container, .hero + section { margin-top: 0; }
-
-/* ==== ALTURA ÚNICA PARA HERO (Inicio = Productos) ==== */
-:root{
-  /* Ajusta este valor si lo deseas milimétrico */
+:root {
+  --teal: #0e6771;
+  --teal-dark: #0b555e;
+  --ink: #0f3b3f;
+  --paper: #ffffff;
   --hero-height: 600px;
   --hero-pad-top: 24px;
   --hero-pad-bottom: 120px;
 }
 
-#inicio.hero,
-#productos.hero{
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', 
+Arial, sans-serif;
+  color: #17363a;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid #e5eef0;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+}
+
+/* === FIJAR LOGO SIN CAMBIOS === */
+.topbar .brand {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-right: 40px;
+  white-space: nowrap;
+  transform: none !important;
+  transition: none !important;
+  letter-spacing: 0.02em !important;
+  color: var(--ink);
+}
+
+.nav a {
+  color: var(--ink);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+  opacity: .9;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* === HERO === */
+.hero {
+  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
   min-height: var(--hero-height) !important;
   padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+#productos.hero {
+  min-height: var(--hero-height) !important;
+  padding: var(--hero-pad-top) 0 var(--hero-pad-bottom) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 40px;
+  line-height: 1.08;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-sub {
+  color: #d9f1f3;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.chip {
+  background: #fff;
+  color: var(--teal);
+  padding: .6rem 1.2rem;
+  border-radius: 28px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn-wsp {
+  display: inline-block;
+  background: #fff;
+  color: var(--teal);
+  font-weight: 700;
+  padding: .65rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 2px 0 rgba(0,0,0,.06);
+}
+
+.btn-wsp:hover {
+  transform: translateY(-1px);
+}
+
+.hero-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.16);
+  padding: 8px;
+  width: 100%;
+  max-width: 660px;
+  margin: 8px auto 0 auto;
+}
+
+.hero-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.site-footer {
+  padding: 18px 0;
+  text-align: center;
+  color: #436d73;
+  background: #fff;
+}
+
+.site-footer small {
+  opacity: .8;
+}
+
+body {
+  margin: 0;
+}
+
+.hero + .container,
+.hero + section {
+  margin-top: 0;
+}
+
+/* === FIN === */
+
